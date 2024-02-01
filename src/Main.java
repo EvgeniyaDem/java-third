@@ -2,14 +2,18 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+    int money_start = 100;
+    int money_add = 2001;
+    int bonus_price = 100;
+    int bonus_amount;
+    int money_end;
+    if (money_add >= 100){
+        bonus_amount = money_add / bonus_price;
+    }else{
+        bonus_amount = 0;
+    }
+    money_end = money_start + money_add + bonus_amount;
+    System.out.println("Начислено бонусных рублей: " + bonus_amount);
+    System.out.println("Итого остаток на счете: " + money_end);
     }
 }
